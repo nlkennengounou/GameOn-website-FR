@@ -188,6 +188,34 @@ main {
   margin: 15px auto;
 }
 
+ .confirmation-message{
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.confirmation-message span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50%;
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.confirmation-message input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
 label {
   font-family: var(--font-default);
   font-size: 17px;
@@ -195,6 +223,7 @@ label {
   display: inline-block;
   margin-bottom: 11px;
 }
+
 input {
   padding: 8px;
   border: 0.8px solid #ccc;
