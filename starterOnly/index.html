@@ -57,10 +57,11 @@
           <span class="close"></span>
           <div class="modal-body">
             <form
+              id="form"
               name="reserve"
               action="index.html"
-              method="get"
-              onsubmit="return validate();"
+              method="POST"
+              novalidate
             >
               <div
                 class="formData">
@@ -200,9 +201,8 @@
                 <br>
               </div>
               <input
-                class="btn-submit"
+                class="btn-submit button"
                 type="submit"
-                class="button"
                 value="C'est parti"
               />
             </form>
