@@ -14,7 +14,7 @@ const closeConfirmationMessageBtn= document.querySelectorAll("#confirmation-clos
 const formData = document.querySelectorAll(".formData");
 const modalSubmitbutton = document.querySelectorAll(".btn-submit");
 
-/** Form elements */
+/* Form elements */
 const firstNameElt = document.getElementById("firstName");
 const lastNameElt = document.getElementById("lastName");
 const emailElt = document.getElementById("email");
@@ -23,12 +23,16 @@ const quantityElt = document.getElementById("quantity");
 const cityElt = document.querySelector("input[type=radio]");
 const conditionsElt = document.getElementById("checkbox1");
 
-/** Regex Formats */
+/* Regex Formats */
 
 const emailFormat = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 const birthdateFormat = /^(19|20)\d{2}[-](0?[1-9]|1[012])[-](0[1-9]|[12]\d|3[01])$/;
 const quantityFormat = /^\+?(0|[1-9]\d*)$/;
 
+/* Variable mobile media query */
+let mediaQueryDesktop= window.matchMedia("(max-width: 1300px)");
+let mediaQueryTablette= window.matchMedia("(max-width: 800px)");
+let mediaQueryMobile = window.matchMedia("(max-width: 540px)");
 
 /********************************************************************************************/
 /************************************** Les évènements **************************************/
@@ -51,7 +55,7 @@ closeConfirmationMessageBtn.forEach((btn) => btn.addEventListener("click", close
 /********************************************************************************************/
 /************************************** Les functions ***************************************/
 /********************************************************************************************/
-
+//modalTopnav.style.display ="none";
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
@@ -161,7 +165,7 @@ function isEmailValid() {
  * @returns {boolean}
  */
  function isCityValid() {
-  let inputCity = new InputFormElement(cityElt, "Veuillez choisir au moins une ville");
+  let inputCity = new InputFormElement(cityElt, "Veuillez choisir une ville");
   let isValid = document.querySelectorAll("input[type=radio]:checked").length > 0;
   removeOrDisplayError(inputCity, isValid);
   return isValid;
