@@ -596,7 +596,7 @@ footer {
     /*margin-top: -15px;*/
   }
 
-  img{
+  img {
     width: 120px;
     margin-left: 0;
   }
@@ -619,7 +619,7 @@ footer {
   .bground{
     position: absolute;
     top: 70px;
-    height: 140%;
+    height: 160%;
     min-width: 290px;
   }
 } 

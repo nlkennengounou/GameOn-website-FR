@@ -44,8 +44,11 @@ modalOpenBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // close modal event
 modalCloseBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 
-// Validate input form event
+// Validate input form on submit event
 formElt.forEach((elt) => elt.addEventListener("submit", checkIfFormIsValid));
+
+// Validate input form on keyup event
+formElt.forEach((elt) => elt.addEventListener("keyup", checkIfFormIsValid));
 
 // close confirmation message event
 closeConfirmationMessageBtn.forEach((btn) => btn.addEventListener("click", closeModal));
@@ -183,10 +186,6 @@ function isEmailValid() {
   removeOrDisplayError(inputConditions, isValid);
   return isValid;
 }
-
-
-
-
 
 
 /** check if a string matches a regex format
